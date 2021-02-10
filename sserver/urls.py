@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from hsnake import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^tscript.js', views.getTScript, name="tscript"),
+    url(r'^', views.getHomePage, name="homepage"),
 ]

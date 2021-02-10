@@ -1,0 +1,6 @@
+	<div onmousemove="onMouseMove(event)" style="width:100%; height:100%;">
+		<center>Make things here</center>
+		<div id = "positionzone">0:0</div>
+		<button onclick="thecirclemoveright()">move the circle</button>
+		<div id = "thecircle" class="circle"></div>
+	</div>

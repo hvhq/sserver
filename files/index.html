@@ -1,4 +1,5 @@
 <!DOCTYPE hmtl>
+<meta charset="UTF-8">
 <html>
 <head>
 <title>
@@ -16,8 +17,7 @@ body, html {
 .bgscreen {
 	background-color: green;
 	height: 100%;
-	background-position: center:
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	background-size: cover;
 }
 .inputname {
@@ -27,7 +27,6 @@ body, html {
 	width: 300px;
 	display: block;
 	margin:auto;
-	padding:auto;
 	font-size:30px;
 	text-align:center;
 }
@@ -38,25 +37,35 @@ body, html {
 .divs{
 	border: 3px solid orange;
 }
+.circle{
+	background: #5050FF;
+	border-radius: 50%;
+	position: relative;
+	width: 40px;
+	height:40px;
+}
 </style>
 </head>
 <body style="background-color:green;">
-	<div style="width:100%; height:100%;">
-		<div class="centerh" style="width:500px;padding-top:200px;">
+	<div id="container" style="width:100%; height:100%;">
+		<div id="toreplace"class="centerh" style="width:500px;padding-top:200px;">
 			<h1 style="width:200px; margin: auto;text-align:center;">HSNAKE</h1>
+			<br/>
+			<br/>
 			<input type="text" id="pname" class="inputname" name="pname">
-			<input type="button" id="go" class="inputname"onclick="goplayboard">
+			<br/>
+			<button id="go" class="inputname" onclick="goplayboard()">Go</button>
 		</div>
 	</div>
 		<!--<div><img src="stones1.jpg" alt="stones" width="100%" height="300px"/></div>
 		<center><b><span style="text-transform:uppercase;">snake hunting</span><b></center>
-
-		<a href = "./subpage.html"><button>Next page</button></a>
 		<p>x = <span id="xholder">0</span></p>
 		<div>
 		<button onclick="increasex()">Increase x</button>
 		<button onclick="decreasex()">Decrease x</button>
-		</div>-->
+		</div>
+		<a href = "./subpage.html"><button>Next page</button></a>-->
+
 
 </body>
 </html>
