@@ -24,8 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'tp9_$ot3gz*l3*r6v0$4of0l%#9$+x3o9ch9&54a=o_sv!mr+r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+#DEBUG = True
+DEBUG = False
 ALLOWED_HOSTS = ['hsnake.herokuapp.com','*']
 
 
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'sserver.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'files'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
