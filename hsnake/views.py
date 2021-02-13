@@ -14,7 +14,20 @@ snakeList = []
 @csrf_exempt
 def getHomePage(request):
     if request.method == "GET":
-        return render(request, "index.html")
+        #insecure mode
+        filename = request.path[1:]
+        print("need:", filename)
+
+        if(filename != ""):
+            try:
+                filename = 'files/'+filename
+                thefile = open(filename, "rb")
+                return FileResponse(thefile)
+            except Exception as e:
+                print("err: ", e)
+        else:
+            #secure mode
+            return render(request, "index.html")
     elif request.method == "POST":
         jsonresponse = {}
         try:

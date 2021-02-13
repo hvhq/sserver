@@ -20,6 +20,11 @@ body, html {
 	background-repeat: repeat;
 	background-size: cover;
 }
+.bgpos {
+	position: relative;
+	top: 0;
+	left: 0;
+}
 .inputname {
 	background-color: #11BB11;
 	border-radius: 25px;
@@ -31,23 +36,41 @@ body, html {
 	text-align:center;
 }
 .centerh {
-	margin-left: auto;
-	margin-right:auto;
+	margin: auto;
 }
 .divs{
 	border: 3px solid orange;
 }
 .circle{
+	position: absolute;
 	background: #5050FF;
+	box-shadow: 2px 2px 1rem rgba(0,0,0,0.7);
 	border-radius: 50%;
-	position: relative;
-	width: 40px;
-	height:40px;
+	border:1px solid black;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	width: 25px;
+	height:25px;
+	top: 50%;
+	left: 50%;
+	transform-origin: center center;
+
+	
 }
+.whiteeye{
+	position:relative;
+	background: #EEEEEE;
+	bottom: 50%;
+	border-radius:50%;
+	border:1px solid black;
+	width:10px;
+	height:10px;
+}
+
 </style>
 </head>
-<body style="background-color:green;">
-	<div id="container" style="width:100%; height:100%;">
+<body  id="container" class = "bgpos" style="width:100%; height:100%;">
+
 		<div id="toreplace"class="centerh" style="width:500px;padding-top:200px;">
 			<h1 style="width:200px; margin: auto;text-align:center;">HSNAKE</h1>
 			<br/>
@@ -56,7 +79,7 @@ body, html {
 			<br/>
 			<button id="go" class="inputname" onclick="goplayboard()">Go</button>
 		</div>
-	</div>
+
 		<!--<div><img src="stones1.jpg" alt="stones" width="100%" height="300px"/></div>
 		<center><b><span style="text-transform:uppercase;">snake hunting</span><b></center>
 		<p>x = <span id="xholder">0</span></p>

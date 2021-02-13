@@ -20,6 +20,11 @@ body, html {
 	background-repeat: repeat;
 	background-size: cover;
 }
+.bgpos {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 .inputname {
 	background-color: #11BB11;
 	border-radius: 25px;
@@ -37,23 +42,56 @@ body, html {
 	border: 3px solid orange;
 }
 .circle{
+	position: absolute;
 	background: #5050FF;
+	box-shadow: 2px 2px 1rem rgba(0,0,0,0.7);
 	border-radius: 50%;
-	position: relative;
-	width: 40px;
-	height:40px;
+	border:1px solid black;
+	border-left:2px solid black;
+	border-right:2px solid black;
+	width: 25px;
+	height:25px;
+	top: 50%;
+	left: 50%;
+	transform-origin: center center;
+
+	
 }
+.whiteeye{
+	position:relative;
+	background: #EEEEEE;
+	bottom: 50%;
+	border-radius:50%;
+	border:1px solid black;
+	width:10px;
+	height:10px;
+}
+
 </style>
 </head>
-<body style="background-color:green;">
-	<div id="container" style="width:100%; height:100%;">
-	<div onmousemove="onMouseMove(event)" style="width:100%; height:100%;">
+<body id="container" class = "bgpos" style="width:100%; height:100%;background-image:url('bgpl.png');">
+	<div id = "inside_container" onmousemove="onMouseMove(event)" style="width:100%; height:100%;">
 		<center>Make things here</center>
 		<div id = "positionzone">0:0</div>
-		<button onclick="thecirclemoveright()">move the circle</button>
-		<div id = "thecircle" class="circle"></div>
+		<div id="positionzone2">0:0</div>
+		<div id="positionzone3">0:0</div>
+		<div id="positionzone4">0:0</div>
+		
+		<button onclick="startMove()">move the circle</button>
+		
+		<button onclick="stopMove()" style="display:block;border-radius:50%;width:5%;height:5%;position:fixed;top:95%;left:95%;">Stop</button>
+		
+		<button onclick="addTail(true)" style="display:block;border-radius:50%;width:5%;height:5%;position:fixed;top:95%;left:90%;">Add tail</button>
+		<button onclick="initialize()" style="display:block;border-radius:50%;width:5%;height:5%;position:fixed;top:95%;left:85%;">Initialize</button>
+		
+
+		<div id = "body0" class="circle" style="top:50%; left:50%;width:30px;height:30px;border:1px solid black;z-index:0;">
+			<div id = "eye1" class = "whiteeye" style="left:0%;top:0%;"></div>
+			<div id = "eye2" class = "whiteeye" style="left:50%;bottom:50%;"></div>
+		</div>
+
 	</div>
-	</div>
+
 		<!--<div><img src="stones1.jpg" alt="stones" width="100%" height="300px"/></div>
 		<center><b><span style="text-transform:uppercase;">snake hunting</span><b></center>
 		<p>x = <span id="xholder">0</span></p>
