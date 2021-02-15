@@ -1,6 +1,10 @@
-<div id = "inside_container" onmousemove="onMouseMove(event)" style="width:100%; height:100%;">
+	<div id = "inside_container" onmousemove="onMouseMove(event)" style="width:100%; height:100%;">
 		<center>Make things here</center>
 		<div id = "positionzone">0:0</div>
+		<div id="positionzone2">0:0</div>
+		<div id="positionzone3">0:0</div>
+		<div id="positionzone4">0:0</div>
+		
 		<button onclick="startMove()">move the circle</button>
 		
 		<button onclick="stopMove()" style="display:block;border-radius:50%;width:5%;height:5%;position:fixed;top:95%;left:95%;">Stop</button>
@@ -9,7 +13,7 @@
 		<button onclick="initialize()" style="display:block;border-radius:50%;width:5%;height:5%;position:fixed;top:95%;left:85%;">Initialize</button>
 		
 
-		<div id = "body0" class="circle" style="width:30px;height:30px;border:1px solid black;z-index:0;">
+		<div id = "body0" class="circle" style="top:50%; left:50%;width:30px;height:30px;border:1px solid black;z-index:0;">
 			<div id = "eye1" class = "whiteeye" style="left:0%;top:0%;"></div>
 			<div id = "eye2" class = "whiteeye" style="left:50%;bottom:50%;"></div>
 		</div>
